@@ -1,1 +1,1 @@
-# RL Playground 2
+# RL Playground
