@@ -1,1 +1,1 @@
-# rl_agents
+# RL Playground
