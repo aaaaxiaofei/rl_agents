@@ -28,10 +28,8 @@ class Params(NamedTuple):
     proba_frozen: float  # Probability that a tile is frozen
     savefig_folder: Path  # Root folder where plots are saved
 
-
-
 def run_env(env, params, learner, explorer):
-    rewards = np.zeros((params.total_episodes, params.n_runs))
+    rewards = []
     steps = np.zeros((params.total_episodes, params.n_runs))
     episodes = np.arange(params.total_episodes)
     qtables = np.zeros((params.n_runs, params.state_size, params.action_size))
@@ -160,7 +158,6 @@ def postprocess(episodes, params, rewards, steps, map_size):
     return res, st
 
 
-
 def main():
     
     params = Params(
@@ -215,6 +212,8 @@ def main():
     #     states=all_states, actions=all_actions, map_size=params.map_size
     # )  # Sanity check
     # plot_q_values_map(qtable, env, params.map_size)
+
+    print(rewards)
 
     env.close()
 

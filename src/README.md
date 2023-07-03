@@ -3,7 +3,7 @@
 ## General Steps
 - Import
 - Parameters (inherent from namedtuple)
-- Creat env
+- Create env
     - gym.make
 - QLearning class, EpsilonGreedy class (explorer)
 - Create learner, explorer
@@ -14,3 +14,8 @@
                 env.step()
 - Visualization
 - Save result
+
+## Design
+- Params in .yml file
+- Read .yml file to namedtuple
+- 
